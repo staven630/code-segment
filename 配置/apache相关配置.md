@@ -5,7 +5,9 @@
 复制php.ini-development文件到C:\Windows目录下,修改成php.ini。方便php版本升级。直接覆盖原版本即可
 
 ### 配置时区
+```$xslt
 date.timezone = PRC
+```
 &emsp;&emsp;配置目录查找扩展库
 ```$xslt
 extension_dir = "D:/amp/php/ext"

@@ -20,7 +20,7 @@
     <meta name="full-screen" content="yes">
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
-    <title></title>
+    <title> </title>
 
 </head>
 <body>

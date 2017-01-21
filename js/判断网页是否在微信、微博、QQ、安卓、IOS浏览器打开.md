@@ -40,6 +40,7 @@ if (browser.versions.mobile) {//判断是否是移动设备打开。browser代�
 
 }
 ```
+
 # 判断是否是手机浏览器
 ```$xslt
 function isMobileBrowser() {
