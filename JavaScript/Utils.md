@@ -1,4 +1,4 @@
-```aidl
+```
 
 var Utils = {
 	//字符串操作函数	
@@ -51,26 +51,21 @@ var Utils = {
 		return date.toISOString().match(/\d{4}-\d{2}-\d{2}/)[0];
 	},
 	
-	//相同参数避免多次调用
-	memoize: function(fn) {
-		var cachedArg;
-		var cachedResult;
-		return function(arg) {
-			if (cachedArg === arg) {
-				return cachedResult;
-			}
-			cachedArg = arg;
-			cachedResult = fn(arg);
-			return cachedResult;
-		}
-	}
 	
 	//浏览器
 	//判断是否是ie浏览器
 	isIE: function() {
 		return !!window.ActiveXObject || 'ActiveXObject' in window;
 	},
-        
+	
+    //获取浏览器版本
+    getIEVersion: function() {
+        var match = navigator.appVersion.match(/MSIE\s+\d+.0;/);
+        if (match == null) return false;
+        return +match[0].match(/\d+/)[0];
+    },
+    
+    //浏览器事件对象系统
     //事件系统
     getEvent: function(event) {
         return event ? event : window.event;
@@ -134,6 +129,22 @@ var Utils = {
     getPageY: function(event) {
         event = this.getEvent(event);
         return typeof event.pageY === 'undefined' ? (event.clientY + (document.body.scrollTop || document.documentElement.scrollTop)) : event.pageX;
+    },
+    
+    
+    //性能优化
+    //相同参数避免多次调用
+    memoize: function(fn) {
+        var cachedArg;
+        var cachedResult;
+        return function(arg) {
+            if (cachedArg === arg) {
+                return cachedResult;
+            }
+            cachedArg = arg;
+            cachedResult = fn(arg);
+            return cachedResult;
+        }
     }
     
 };
