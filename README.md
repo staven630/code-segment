@@ -1,6 +1,7 @@
 # code-segment
 ### [常用CSS代码段](https://github.com/staven630/code-segment/tree/master/css)
 * [清浮动](https://github.com/staven630/code-segment/blob/master/css/%E6%B8%85%E6%B5%AE%E5%8A%A8.md)
+* [文本溢出](https://github.com/staven630/code-segment/blob/master/css/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA.md)
 
 ### [常用JavaScript代码段](https://github.com/staven630/code-segment/tree/master/JavaScript)
 * [Utils封装代码库](https://github.com/staven630/code-segment/blob/master/JavaScript/Utils.md)
