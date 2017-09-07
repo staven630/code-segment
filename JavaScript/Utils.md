@@ -1,7 +1,6 @@
 ```
-
 var Utils = {
-	//字符串操作函数	
+	//字符串操作函数
 	/**
 	 * 以某字符分隔字符串
 	 * @param {Object} num	每几位数
@@ -10,7 +9,7 @@ var Utils = {
 		var reg = new RegExp("\(\\d)(?=(?:\\d{" + num + "})+$)", 'g');
 		return string.toString().replace(reg, '$1' + regStr);
 	},
-	
+
 	/**
 	 * 隐藏/替换字符串中间几位
 	 * @param {Object} startNum 开始替换位数
@@ -21,7 +20,7 @@ var Utils = {
 		var reg = new RegExp("\^(.{" + startNum + "})(?:\\d+)(.{" + lastNum + "})$");
 		return string.toString().replace(reg, "$1"+ regStr +"$2");
 	},
-	
+
 	/**
 	 * 每三位正数添加逗号
 	 * @param {Object} type 需要保留的小数
@@ -35,7 +34,7 @@ var Utils = {
 		while(re.test(string))
 			string = string.replace(re, "$1,$2");
 		string = string.replace(/,(\d\d)$/, ".$1");
-		if(type == 0) { // 不带小数位(默认是有小数位)  
+		if(type == 0) { // 不带小数位(默认是有小数位)
 			var a = string.split(".");
 			if(a[1] == "00") {
 				string = a[0];
@@ -103,28 +102,28 @@ var Utils = {
     getUnion: function(a, b) {
         return this.getUniquelize(a.concat(b));
     },
-	
+
 	//日期操作函数
     //获取YYYY-MM-DD格式日期
 	getYYYYMMDD: function(time) {
 		var date = time ? new Date(time) : new Date();
 		return date.toISOString().match(/\d{4}-\d{2}-\d{2}/)[0];
 	},
-	
-	
+
+
 	//浏览器
 	//判断是否是ie浏览器
 	isIE: function() {
 		return !!window.ActiveXObject || 'ActiveXObject' in window;
 	},
-	
+
     //获取浏览器版本
     getIEVersion: function() {
         var match = navigator.appVersion.match(/MSIE\s+\d+.0;/);
         if (match == null) return false;
         return +match[0].match(/\d+/)[0];
     },
-    
+
     //浏览器事件对象系统
     //事件系统
     getEvent: function(event) {
@@ -229,7 +228,7 @@ var Utils = {
             return cachedResult;
         }
     }
-    
+
 };
 
 ```
