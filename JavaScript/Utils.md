@@ -43,6 +43,66 @@ var Utils = {
 		}
 		return string;
 	},
+
+	//数组操作
+    //数组功能扩展
+    each: function(arr, fn) {
+        fn = fn || Function.K;
+        var a = [];
+        var args = Array.prototype.slice.call(arguments, 2);
+        for(var i = 0; i < arr.length; i++) {
+            var res = fn.apply(arr, [arr[i], i].concat(args));
+            if(res != null) a.push(res);
+        }
+        return a;
+    },
+
+    //数组是否包含指定元素
+    contains: function(sourceArr, targetArr) {
+        for(var i = 0; i < sourceArr.length; i++) {
+            if(sourceArr[i] == targetArr) {
+                return true;
+            }
+        }
+        return false;
+    },
+
+    //不重复元素构成的数组
+    getUniquelize: function(targetArr) {
+        var arr = new Array();
+        for(var i = 0; i < targetArr.length; i++) {
+            if(!this.contains(arr, targetArr[i])) {
+                arr.push(targetArr[i]);
+            }
+        }
+        return arr;
+    },
+
+    //两个数组的补集
+    getComplement: function(a, b) {
+        return this.getMinus(this.getUnion(a, b), this.getIntersect(a, b));
+    },
+
+    //两个数组的交集
+    getIntersect: function(a, b) {
+        var that = this;
+        return that.each(that.getUniquelize(a), function(o) {
+            return that.contains(b, o) ? o : null
+        });
+    },
+
+    //两个数组的差集
+    getMinus: function(a, b) {
+        var that = this;
+        return that.each(that.getUniquelize(a), function(o) {
+            return that.contains(b, o) ? null : o
+        });
+    },
+
+    //两个数组并集
+    getUnion: function(a, b) {
+        return this.getUniquelize(a.concat(b));
+    },
 	
 	//日期操作函数
     //获取YYYY-MM-DD格式日期
@@ -130,8 +190,31 @@ var Utils = {
         event = this.getEvent(event);
         return typeof event.pageY === 'undefined' ? (event.clientY + (document.body.scrollTop || document.documentElement.scrollTop)) : event.pageX;
     },
-    
-    
+
+    //存储相关
+    //存Cookie
+    setCookie: function(key, value, expiredays) {
+        expiredays = expiredays || 30;		//默认30天　
+        var exdate = new Date();　　　
+        exdate.setDate(exdate.getDate() + expiredays);　　　
+        document.cookie = key + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+    },
+
+    //读Cookie
+    getCookie: function(key) {
+        var arr, reg = new RegExp("(^| )" + key + "=([^;]*)(;|$)");
+        return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
+    },
+
+    //删Cookie
+    removeCookie: function(key) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval = this.getCookie(key);
+        if(cval != null)
+            document.cookie = key + "=" + cval + ";expires=" + exp.toGMTString();
+    },
+
     //性能优化
     //相同参数避免多次调用
     memoize: function(fn) {
