@@ -56,10 +56,10 @@ var Utils = {
         return a;
     },
 
-    //数组是否包含指定元素
-    contains: function(sourceArr, targetArr) {
-        for(var i = 0; i < sourceArr.length; i++) {
-            if(sourceArr[i] == targetArr) {
+    //数组a是否包含指定元素b
+    contains: function(a, b) {
+        for(var i = 0; i < a.length; i++) {
+            if(a[i] == b) {
                 return true;
             }
         }
@@ -67,11 +67,11 @@ var Utils = {
     },
 
     //不重复元素构成的数组
-    getUniquelize: function(targetArr) {
+    getUniquelize: function(a) {
         var arr = new Array();
-        for(var i = 0; i < targetArr.length; i++) {
-            if(!this.contains(arr, targetArr[i])) {
-                arr.push(targetArr[i]);
+        for(var i = 0; i < a.length; i++) {
+            if(!this.contains(arr, a[i])) {
+                arr.push(a[i]);
             }
         }
         return arr;
