@@ -1,49 +1,49 @@
 ```
 var Utils = {
-	//字符串操作函数
-	/**
-	 * 以某字符分隔字符串
-	 * @param {Object} num	每几位数
-	 * @param {Object} regStr 替换字符串
-	separateString: function(string, num, regStr) {
-		var reg = new RegExp("\(\\d)(?=(?:\\d{" + num + "})+$)", 'g');
-		return string.toString().replace(reg, '$1' + regStr);
-	},
+    //字符串操作函数
+    /**
+    * 以某字符分隔字符串
+    * @param {Object} num    每几位数
+    * @param {Object} regStr 替换字符串
+    separateString: function(string, num, regStr) {
+        var reg = new RegExp("\(\\d)(?=(?:\\d{" + num + "})+$)", 'g');
+        return string.toString().replace(reg, '$1' + regStr);
+    },
 
-	/**
-	 * 隐藏/替换字符串中间几位
-	 * @param {Object} startNum 开始替换位数
-	 * @param {Object} lastNum	结束替换为数
-	 * @param {Object} regStr	替换的字符串
-	 */
-	hideMiddleString: function(string, startNum, lastNum, regStr) {
-		var reg = new RegExp("\^(.{" + startNum + "})(?:\\d+)(.{" + lastNum + "})$");
-		return string.toString().replace(reg, "$1"+ regStr +"$2");
-	},
+    /**
+    * 隐藏/替换字符串中间几位
+    * @param {Object} startNum 开始替换位数
+    * @param {Object} lastNum    结束替换为数
+    * @param {Object} regStr    替换的字符串
+    */
+    hideMiddleString: function(string, startNum, lastNum, regStr) {
+        var reg = new RegExp("\^(.{" + startNum + "})(?:\\d+)(.{" + lastNum + "})$");
+        return string.toString().replace(reg, "$1"+ regStr +"$2");
+    },
 
-	/**
-	 * 每三位正数添加逗号
-	 * @param {Object} type 需要保留的小数
-	 */
-	separateMoney: function(string, type) {
-		if(/[^0-9\.]/.test(string) || string == null || string == "") return 0;
-		string = string.toString().replace(/^(\d*)$/, "$1.");
-		string = (string + "00").replace(/(\d*\.\d\d)\d*/, "$1");
-		string = string.replace(".", ",");
-		var re = /(\d)(\d{3},)/;
-		while(re.test(string))
-			string = string.replace(re, "$1,$2");
-		string = string.replace(/,(\d\d)$/, ".$1");
-		if(type == 0) { // 不带小数位(默认是有小数位)
-			var a = string.split(".");
-			if(a[1] == "00") {
-				string = a[0];
-			}
-		}
-		return string;
-	},
+    /**
+    * 每三位正数添加逗号
+    * @param {Object} type 需要保留的小数
+    */
+    separateMoney: function(string, type) {
+        if(/[^0-9\.]/.test(string) || string == null || string == "") return 0;
+        string = string.toString().replace(/^(\d*)$/, "$1.");
+        string = (string + "00").replace(/(\d*\.\d\d)\d*/, "$1");
+        string = string.replace(".", ",");
+        var re = /(\d)(\d{3},)/;
+        while(re.test(string))
+            string = string.replace(re, "$1,$2");
+        string = string.replace(/,(\d\d)$/, ".$1");
+        if(type == 0) { // 不带小数位(默认是有小数位)
+            var a = string.split(".");
+            if(a[1] == "00") {
+                string = a[0];
+            }
+        }
+        return string;
+    },
 
-	//数组操作
+    //数组操作
     //数组功能扩展
     each: function(arr, fn) {
         fn = fn || Function.K;
@@ -103,19 +103,19 @@ var Utils = {
         return this.getUniquelize(a.concat(b));
     },
 
-	//日期操作函数
+    //日期操作函数
     //获取YYYY-MM-DD格式日期
-	getYYYYMMDD: function(time) {
-		var date = time ? new Date(time) : new Date();
-		return date.toISOString().match(/\d{4}-\d{2}-\d{2}/)[0];
-	},
+    getYYYYMMDD: function(time) {
+        var date = time ? new Date(time) : new Date();
+        return date.toISOString().match(/\d{4}-\d{2}-\d{2}/)[0];
+    },
 
 
-	//浏览器
-	//判断是否是ie浏览器
-	isIE: function() {
-		return !!window.ActiveXObject || 'ActiveXObject' in window;
-	},
+    //浏览器
+    //判断是否是ie浏览器
+    isIE: function() {
+        return !!window.ActiveXObject || 'ActiveXObject' in window;
+    },
 
     //获取浏览器版本
     getIEVersion: function() {
@@ -193,7 +193,7 @@ var Utils = {
     //存储相关
     //存Cookie
     setCookie: function(key, value, expiredays) {
-        expiredays = expiredays || 30;		//默认30天　
+        expiredays = expiredays || 30;        //默认30天　
         var exdate = new Date();　　　
         exdate.setDate(exdate.getDate() + expiredays);　　　
         document.cookie = key + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
