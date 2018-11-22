@@ -36,6 +36,7 @@
           border-radius: $radius;
 }
 
+/* retina */
 @mixin retina($image, $extension, $width, $height, $position: center, $repeat: no-repeat) {
      background: url($image + '.' + $extension) $repeat $position;
      @media 
