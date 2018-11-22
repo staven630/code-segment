@@ -26,7 +26,7 @@ Page({
 ```
 ### wxml末尾添加
 ```
-<view class="ipx-wrapper" wx:if="ipx"></view>
+<view class="ipx-wrapper" wx:if="{{ipx}}"></view>
 ```
 ### 设置wxss样式
 ```
