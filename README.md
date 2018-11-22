@@ -12,7 +12,7 @@
 * [浏览器事件对象系统](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%B3%BB%E7%BB%9F.md)
 * [浏览器操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%93%8D%E4%BD%9C.md)
 
-# [小程序代码段](https://github.com/staven630/code-segment/tree/master/miniprogram)
+### [小程序代码段](https://github.com/staven630/code-segment/tree/master/miniprogram)
 * [utils.js](https://github.com/staven630/code-segment/blob/master/miniprogram/utils.js.md)
 * [setStorageSync设置有效时间](https://github.com/staven630/code-segment/blob/master/miniprogram/setStorageSync%E8%AE%BE%E7%BD%AE%E6%9C%89%E6%95%88%E6%97%B6%E9%97%B4.md)
 * [小程序switch样式修改](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8Fswitch%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.md)
