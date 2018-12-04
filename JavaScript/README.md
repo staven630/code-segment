@@ -1,6 +1,10 @@
 * [Utils封装代码库](https://github.com/staven630/code-segment/blob/master/JavaScript/Utils.md)
 * [日期操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%97%A5%E6%9C%9F%E6%93%8D%E4%BD%9C.md)
-* [字符串操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C.md)
+### [字符串操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C.md)
+* 过滤HTML代码
+* 以某字符分隔字符串(如：数字每三位以“,”隔开)
+* 隐藏/替换字符串中间几位
+* 金额每三位正数添加逗号(支持保留小数)
 
 ### [数组操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C.md)
 * 基本类型数组去重
