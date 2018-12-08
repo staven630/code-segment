@@ -42,3 +42,5 @@
 * 以某字符分隔字符串(如：数字每三位以“,”隔开)
 * 隐藏/替换字符串中间几位
 * 金额每三位正数添加逗号(支持保留小数)
+
+##### [✔ 性能优化](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md)
