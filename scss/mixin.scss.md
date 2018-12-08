@@ -1,4 +1,4 @@
-
+```
 /* 清浮动 */
 @mixin clearfix() {
   *zoom: 1;
@@ -51,3 +51,4 @@
         background-size: $width $height;
      }
 }
+```
