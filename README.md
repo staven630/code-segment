@@ -11,6 +11,11 @@
 * LocalStorage
 
 ##### [✔ 浏览器操作](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%93%8D%E4%BD%9C.md)
+* 获取链接中键相应的值
+* 返回链接中所有键值数组
+* 返回链接中所有键值对象
+* 向链接中添加键值对
+* 修改链接中键对应的值
 * 判断是否是ie浏览器
 * 获取浏览器版本
 * 判断是否是微信浏览器
