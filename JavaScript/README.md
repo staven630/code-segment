@@ -2,6 +2,9 @@
 
 ##### [✔ Map](https://github.com/staven630/code-segment/blob/master/JavaScript/Map.md)
 
+- Map 转 Object
+- Object 转 Map
+
 ##### [✔ 存储](https://github.com/staven630/code-segment/blob/master/JavaScript/%E5%AD%98%E5%82%A8.md)
 
 - Cookie
