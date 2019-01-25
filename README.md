@@ -25,6 +25,10 @@
 - 返回链接中所有键值对象
 - 向链接中添加键值对
 - 修改链接中键对应的值
+- 是否具有 className
+- 添加 className
+- 删除 className
+- 切换 className
 - 判断是否是 ie 浏览器
 - 获取浏览器版本
 - 判断是否是微信浏览器
@@ -64,6 +68,7 @@
 - 以某字符分隔字符串(如：数字每三位以“,”隔开)
 - 隐藏/替换字符串中间几位
 - 金额每三位正数添加逗号(支持保留小数)
+- trim
 
 ##### [✔ 性能优化](https://github.com/staven630/code-segment/blob/master/JavaScript/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md)
 
