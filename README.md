@@ -74,7 +74,7 @@
 
 ### [☞ 小程序代码段](https://github.com/staven630/code-segment/tree/master/miniprogram)
 
-- [utils.js](https://github.com/staven630/code-segment/blob/master/miniprogram/utils.js.md)
+- [utils](https://github.com/staven630/code-segment/blob/master/assets/miniprogram)
 
 * [小程序授权](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%88%E6%9D%83.md)
 
