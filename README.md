@@ -74,10 +74,8 @@
 
 ### [☞ 小程序代码段](https://github.com/staven630/code-segment/tree/master/miniprogram)
 
-- [utils.js](https://github.com/staven630/code-segment/blob/master/miniprogram/utils.js.md)
-
-* [小程序授权](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%88%E6%9D%83.md)
-
+- [utils](https://github.com/staven630/code-segment/blob/master/assets/miniprogram)
+- [小程序授权](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%88%E6%9D%83.md)
 - [setStorageSync 设置有效时间](https://github.com/staven630/code-segment/blob/master/miniprogram/setStorageSync%E8%AE%BE%E7%BD%AE%E6%9C%89%E6%95%88%E6%97%B6%E9%97%B4.md)
 - [小程序 switch 样式修改](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8Fswitch%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9.md)
 - [小程序兼容 iPhone X 刘海屏](https://github.com/staven630/code-segment/blob/master/miniprogram/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%BC%E5%AE%B9iPhone%20X%E5%88%98%E6%B5%B7%E5%B1%8F.md)
