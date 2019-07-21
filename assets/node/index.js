@@ -5,14 +5,12 @@
  * @param {*} dir 文件目录 
  * @param {Function} cb 变化回调
  */
-export function watchDir(dir, cb = () => { }) {
-  const watcher = require('chokidar').watch([dir])
-  watcher.on('ready', function () {
-    watcher.on('change', function () {
-      // 执行变化操作
-      cb();
+export function watch(dir, cb = () => { }) {
+  import chokidar from 'chokidar'
+  chokidar.watch(dir, { ignored: /(^|[\/\\])\../ })
+    .on('change', (event, path) => {
+      cb(event, path)
     })
-  })
 }
 
 /**
@@ -20,7 +18,7 @@ export function watchDir(dir, cb = () => { }) {
  * @param {String} cmd 操作命令 
  */
 export function exec(cmd) {
-  return require('child_process').execSync(cmd).toString().trim()
+  return require('child_process').execSync(cmd).toString('utf8').trim()
 }
 
 /**
