@@ -1,0 +1,21 @@
+@mixin button($text-color, $background-color, $border, $font-weight) {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: $background-color;
+  border: $border;
+  color: $text-color;
+  font-weight: $font-weight;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
