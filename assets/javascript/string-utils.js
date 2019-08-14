@@ -13,7 +13,16 @@ export const camelToKebab = input => {
  * @param input
  */
 export const kebabToCamel = input => {
-  return input.replace(/-([a-z])/g, function(g) {
+  return input.replace(/-([a-z])/g, function (g) {
     return g[1].toUpperCase()
   })
 }
+
+
+/**
+ * 随机生成长度为len的字符串
+ * @returns {string} 
+ * @param len 字符串长度
+ */
+export const randomString = (len) => Math.random().toString(36).substring(2, len + 2);
+
