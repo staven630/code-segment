@@ -68,18 +68,14 @@ export const downloadByLink = (url, filename = Date.now(), mode) => {
   const link = document.createElement('a')
   if ('download' in link) {
     link.href = url
-    console.log(image)
-    image.src = url
     link.download = filename
     link.style.display = 'none'
     document.body.appendChild(link)
     link.click()
-    document.body.removeChild(link)
     if (mode) {
-      setTimeout(() => {
-        URL.revokeObjectURL(link.href)
-      }, 1000)
+      URL.revokeObjectURL(link.href)
     }
+    document.body.removeChild(link)
   } else if (document.createEvent) {
     const event = document.createEvent('MouseEvents')
     event.initMouseEvent(
