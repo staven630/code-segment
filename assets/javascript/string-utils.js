@@ -26,3 +26,27 @@ export const kebabToCamel = input => {
  */
 export const randomString = (len) => Math.random().toString(36).substring(2, len + 2);
 
+/**
+ * 获取高亮分词列表
+ * @param {string} keyword 关键字
+ * @param {string} fulltext 整段文本
+ */
+export const getHighlightList = (keyword, fulltext) => {
+  const reg = new RegExp(keyword, 'ig')
+  const len = keyword.length;
+
+  let list = []
+  let item = []
+  let prevIndex = 0;
+
+  while ((item = reg.exec(fulltext)) !== null) {
+    const curr = fulltext.substring(prevIndex, item.index)
+    curr && list.push({ text: curr })
+    list.push({ text: keyword, highlight: true })
+    prevIndex = item.index + len
+  }
+
+  list.push({ text: fulltext.substring(prevIndex) })
+
+  return list
+}
