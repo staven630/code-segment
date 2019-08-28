@@ -1,3 +1,6 @@
+# 已发布成功能更全的库
+[es-aux: https://github.com/staven630/es-aux](https://github.com/staven630/es-aux)
+
 ### [☞ scss](https://github.com/staven630/code-segment/tree/master/scss)
 
 - [mixin.scss](https://github.com/staven630/code-segment/blob/master/scss/mixin.scss.md)

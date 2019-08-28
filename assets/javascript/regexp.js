@@ -1,0 +1,1 @@
+export const IS_BASE64 = /^data:([\w+-]+\/[\w+.-]+)?[,;]/
