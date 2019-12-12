@@ -12,9 +12,9 @@ export function getRandomRgb(alpha) {
   let g = Math.floor(Math.random() * 256);
   let b = Math.floor(Math.random() * 256);
   return hasAlpha ? {
-    r, g, b, rgb: `rgb(${red}, ${green}, ${blue})`
+    r, g, b, rgb: `rgb(${r}, ${g}, ${b})`
   } : {
-      r, g, b, a: alpha, rgba: `rgba(${red}, ${green}, ${blue}, ${alpha})`
+      r, g, b, a: alpha, rgba: `rgba(${r}, ${g}, ${b}, ${alpha})`
     };
 }
 
